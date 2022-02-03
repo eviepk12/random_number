@@ -25,9 +25,9 @@ def computerGuess(x):
         else:
             guess = low
         
-        feedback = input(f"is {guess} too high (H), too low (L), or correct (C)???").lower()
+        feedback = input(f"is {guess} too high (H), too low (L), or correct (C)??? : ").lower() # because we had "c" in lower cases, having the user input in upper case would not work. So .lower is converting the input to lowercases
         if feedback == "h":
-            high = guess - 1
+            high = guess - 1 
         elif feedback == "l":
             low = guess + 1
 
@@ -39,12 +39,12 @@ print("1. Guess a number the computer have selected randomly")
 print("2. Computer Guess (think of a number and the nunmber will guess it)")
 print("----------------------------------------------")
 
-option = int(input("Ketik nomor yang diinginkan : "))
+option = int(input("Type the option you want : "))
 
 match option: 
     case 1:
         guessNumber(int(input("How much of the range do you want the number to be? : ")))
     case 2:
-        computerGuess()
+        computerGuess(int(input("Think of a number, and How much of the range do you want the number to be? : ")))
     case _:
         print("Choose the correct option!!")
