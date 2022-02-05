@@ -1,8 +1,11 @@
+# Small guess the number game in python
+# made my enal
+
 import random
 
 def guessNumber(x):
     randomNumber = random.randint(1, x)
-    guess = 0
+    guess = 0 #declared 0 so the number never goes below 1
 
     while guess != randomNumber: 
         guess = int(input(f"Guess a number between 1 and 10 : " ))
